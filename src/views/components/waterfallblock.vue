@@ -1,7 +1,7 @@
 <template>
   <!--瀑布流块组件-->
   <div>
-
+    这是瀑布流区域
   </div>
 </template>
 

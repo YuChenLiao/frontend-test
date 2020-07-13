@@ -1,14 +1,13 @@
 <template>
   <div class="home">
-    <Found-tab></Found-tab>
-    <waterfall-block></waterfall-block>
-    这是主页
+    <found-tab class="app-top"></found-tab>
+    <waterfall-block class="w-fall"></waterfall-block>
   </div>
 </template>
 
 <script>
-import WaterfallBlock from './components/waterfallblock.vue'
-import FuondTab from './components/foundTab.vue';
+import WaterfallBlock from './components/waterfallblock.vue';
+import FoundTab from './components/foundTab.vue';
 
 export default {
   name: 'Home',
@@ -25,4 +24,11 @@ export default {
     width 100%
     height 100%
     font-size .5rem
+    .app-top
+      position fixed
+      top 0px
+      z-index 99
+      width 100%
+    .w-fall
+      margin-top .5rem
 </style>
