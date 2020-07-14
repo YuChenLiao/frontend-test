@@ -21,6 +21,7 @@ export default {
 <style lang="stylus" scoped>
   .home
     background-size 100% 100%
+    background-color grey
     width 100%
     height 100%
     font-size .5rem
