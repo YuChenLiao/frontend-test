@@ -1,6 +1,6 @@
 <template>
   <!--搜索栏组件-->
-  <div style="display: flex">
+  <div>
     <div class="found-box">
       <div class="f-left">
         <span class="l-item"></span>
@@ -37,7 +37,36 @@
           <div class="el-icon-arrow-down bell"></div>
         </span>
       </div>
-      <div class="hot-bar" v-show="hot==1"></div>
+      <div class="hot-bar" v-show="hot==1">
+        <p style="font-size: .1rem;width: 100%;margin-bottom: .1rem">Printerest上的热门</p>
+        <div class="img-box">
+          <!--记得用v-for修改-->
+          <div class="img-c">
+            <img class="i-item" src="@/assets/testpic/风景.png" alt="">
+          </div>
+          <div class="img-c">
+            <img class="i-item" src="@/assets/testpic/风景.png" alt="">
+          </div>
+          <div class="img-c">
+            <img class="i-item" src="@/assets/testpic/风景.png" alt="">
+          </div>
+          <div class="img-c">
+            <img class="i-item" src="@/assets/testpic/风景.png" alt="">
+          </div>
+          <div class="img-c">
+            <img class="i-item" src="@/assets/testpic/风景.png" alt="">
+          </div>
+          <div class="img-c">
+            <img class="i-item" src="@/assets/testpic/风景.png" alt="">
+          </div>
+          <div class="img-c">
+            <img class="i-item" src="@/assets/testpic/风景.png" alt="">
+          </div>
+          <div class="img-c">
+            <img class="i-item" src="@/assets/testpic/风景.png" alt="">
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -72,7 +101,7 @@ export default class FoundTab extends Vue {
     background-size contain
     background-color #ffffff
     .f-left
-      width 20%
+      width 15%
       height 100%
       font-size .2rem
       display flex
@@ -95,7 +124,7 @@ export default class FoundTab extends Vue {
           text-align center
           font-size 15px
     .f-area
-      width 60%
+      width 70%
       .i-area
         position absolute
         margin auto
@@ -104,10 +133,10 @@ export default class FoundTab extends Vue {
         right 0
         top 0
         bottom 0
-        width 60%
+        width 70%
         display inline-block
     .f-right
-      width 20%
+      width 15%
       height 100%
       font-size .2rem
       display flex
@@ -126,9 +155,27 @@ export default class FoundTab extends Vue {
           border-radius .1rem
           background-color grey
   .hot-bar
-    width 100%
+    width 66%
     height 2rem
-    background-color black
-    top .5rem
+    background-color #ffffff
     position absolute
+    margin auto
+    top .5rem
+    left 0
+    right 0
+    padding .15rem
+    .img-box
+      width 56%
+      height 1.6rem
+      .img-c
+        margin .05rem
+        width 23%
+        height 50%
+        background-color #ffffff
+        display inline-table
+        border-radius .08rem
+        overflow hidden
+        .i-item
+          width 100%
+          height 100%
 </style>
