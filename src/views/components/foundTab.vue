@@ -156,7 +156,7 @@ export default class FoundTab extends Vue {
           background-color grey
   .hot-bar
     width 66%
-    height 2rem
+    height 280%
     background-color #ffffff
     position absolute
     margin auto
@@ -166,10 +166,10 @@ export default class FoundTab extends Vue {
     padding .15rem
     .img-box
       width 56%
-      height 1.6rem
+      height 50%
       .img-c
-        margin .05rem
-        width 23%
+        margin .5%
+        width 22%
         height 50%
         background-color #ffffff
         display inline-table
