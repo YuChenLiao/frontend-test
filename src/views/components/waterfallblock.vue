@@ -2,6 +2,7 @@
   <!--瀑布流块组件-->
   <div class="w-box">
     <button @click="getimg()"></button>
+    <img :src="temp.url" alt="">
     <div class="w-c">
       <div class="w-img"></div>
     </div>
@@ -18,12 +19,12 @@ export default class WaterfallBlock extends Vue {
 
   imgsrc = [];
 
-  test = [];
+  temp = [];
 
   getimg() {
     axios.get('https://api.thecatapi.com/v1/images/search').then((res) => {
-      this.test = res.data;
-      console.log(this.test);
+      this.temp = res.data[0];
+      console.log(this.temp);
     });
   }
 }
