@@ -65,21 +65,21 @@ export default class WaterfallBlock extends Vue {
           left: 0,
         };
         // 计算缩放后的高度
-        pic.height = (160/pic.width)*temp[0].height;
+        pic.height = Math.ceil((160/pic.width)*temp[0].height) + 30;
         // 获取高度最低列
         let minIndex = this.waterfallDeviationHeight.indexOf(Math.min.apply(null, this.waterfallDeviationHeight));
         // 获取图片顶部位置
-        pic.top = this.waterfallDeviationHeight[minIndex] + 10;
+        pic.top = this.waterfallDeviationHeight[minIndex];
         pic.left = minIndex*(this.waterfallImgRight + 170);
         this.waterfallDeviationHeight[minIndex] += pic.height + this.waterfallImgBottom;
-        console.log('-- Image from TheCatAPI.com');
+        console.log('珍爱生命，远离eslint');
         this.imgsrc.push(pic);
         // console.log('url:', this.imgsrc[i].url);
-        console.log(this.imgsrc[i].left);
-        console.log(this.domWidth);
-        console.log(this.waterfallDeviationHeight.length)
-        console.log(minIndex);
-        console.log(this.waterfallImgCol);
+        // console.log(this.imgsrc[i].left);
+        // console.log(this.domWidth);
+        // console.log(this.waterfallDeviationHeight.length)
+        // console.log(minIndex);
+        // console.log(this.waterfallImgCol);
         j += 1;
       } catch (err) {
         console.log(err);
@@ -101,8 +101,10 @@ export default class WaterfallBlock extends Vue {
       position relative
       .w-img
         width 1.7rem
+        overflow hidden
         position absolute
         .i-item
           width 100%
           height 100%
+          border-radius .1rem
 </style>
