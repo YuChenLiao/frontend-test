@@ -50,7 +50,7 @@ export default class WaterfallBlock extends Vue {
     for ( let k = 0;k < this.waterfallDeviationHeight.length; k += 1) {
       this.waterfallDeviationHeight[k] = 0;
     }
-    for (let i = 1; i <= 40; i += 1) {
+    for (let i = 1; i <= 60; i += 1) {
       let j = 1;
       try {
         axios.defaults.headers.common['x-api-key'] = '40a43cad-bb75-475b-bf26-c6a60506a908'; // Replace this with your API Key
